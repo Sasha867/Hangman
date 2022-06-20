@@ -1,0 +1,13 @@
+#word {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 8rem;
+    font-weight: 600;
+}
+
+span{
+    display: inline-block;
+    border-bottom: red solid 5px;
+    margin: 0 10px 0 10px;
+    width: 100px;
+}

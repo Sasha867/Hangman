@@ -1,25 +1,27 @@
 #word {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 8rem;
+  font-weight: 600;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+}
+
+.wrapInput {
+  max-width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+span {
+  display: inline-block;
+  border-bottom: red solid 5px;
+  margin: 0 10px 0 10px;
+  width: 100px;
+}
+#containerWordLine{
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 8rem;
-    font-weight: 600;
-}
-
-img{
-    margin:  0 auto;
-    display: block;
-}
-
-.wrapInput{
-    max-width: 100%;
-    text-align: center;
-    padding-top: 50px;
-}
-
-
-span{
-    display: inline-block;
-    border-bottom: red solid 5px;
-    margin: 0 10px 0 10px;
-    width: 100px;
 }

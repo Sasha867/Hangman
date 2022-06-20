@@ -5,7 +5,8 @@ function mathRandom(max) {
 }
 
 function randomWords(list) {
-  let word = list[mathRandom(list.length)];
-  return word.split("");
+  let word = list[mathRandom(list.length)].split("");
+  return word;
 }
+
 

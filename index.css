@@ -5,6 +5,18 @@
     font-weight: 600;
 }
 
+img{
+    margin:  0 auto;
+    display: block;
+}
+
+.wrapInput{
+    max-width: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
 span{
     display: inline-block;
     border-bottom: red solid 5px;

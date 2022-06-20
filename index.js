@@ -1,5 +1,5 @@
-<<<<<<< Updated upstream
 import { randomWords } from "./utils.js";
+import { createLetters } from "./createElements.js";
 
 const arrWords = [
   "truck",
@@ -17,8 +17,5 @@ const arrWords = [
 
 const word = randomWords(arrWords);
 console.log(word);
-=======
-import { createLetters } from "./createElements.js";
 
 
->>>>>>> Stashed changes

@@ -8,3 +8,4 @@ function randomWords(list) {
   let word = list[mathRandom(list.length)];
   return word.split("");
 }
+

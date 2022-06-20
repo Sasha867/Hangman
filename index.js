@@ -1,19 +1,18 @@
-const words = [
-    'truck',
-    'pencil',
-    'rain',
-    'banana',
-    'potato',
-    'car',
-    'mountain',
-    'bike',
-    'house',
-    'elephant'
-]
+import { randomWords } from "./utils.js";
 
-function generateWordRandom(words){
-    const indexWord = Math.floor(Math.random() * (10 - 1)) + 1;
-    console.log (words[indexWord]);
-}
+const arrWords = [
+  "truck",
+  "pencil",
+  "rain",
+  "banana",
+  "potato",
+  "car",
+  "mountain",
+  "bike",
+  "house",
+  "elephant",
+];
 
-generateWordRandom(words)
+
+const word = randomWords(arrWords);
+console.log(word);

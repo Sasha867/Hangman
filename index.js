@@ -1,5 +1,6 @@
 import { randomWords } from "./utils.js";
 import { createLetters } from "./createElements.js";
+import{chekValue} from './chekValue.js'
 
 export { word };
 
@@ -22,4 +23,10 @@ console.log(word);
 
 
 createLetters();
+
+const button = document.getElementById("button");
+button.addEventListener("click", chekValue);
+
+const span = document.createElement("span");
+
 

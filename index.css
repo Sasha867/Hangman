@@ -1,3 +1,9 @@
+/* *{
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+} */
+
 #containerWordLine {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -13,7 +19,7 @@ img {
 .wrapInput {
   max-width: 100%;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 span {
@@ -22,6 +28,29 @@ span {
   margin: 0 10px 0 10px;
   width: 100px;
 }
-#containerWordLine{
-    text-align: center;
+#containerWordLine {
+  text-align: center;
+}
+
+#input {
+  font-size: 20px;
+  border: 3px solid red;
+  height: 30px;
+  width: 300px;
+  text-indent: 25%;
+  
+}
+::-webkit-input-placeholder {
+  font-size: 18px;
+  font-family: Tahoma;
+ color: rgb(150, 139, 139);
+}
+
+#containerButtonStart{
+  text-align: center;
+}
+#buttonStart{
+  margin-top: 15px;
+  width: 200px;
+  height: 25px;
 }

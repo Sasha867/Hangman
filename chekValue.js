@@ -1,13 +1,12 @@
-import { word } from "./index.js";
-
+import { arrImage, word } from "./index.js";
+import { showLetter } from "./functionsShowElemets.js";
+import { changeImages } from "./functionsShowElemets.js";
+import { input } from "./index.js";
 
 export function chekValue() {
-    const input = document.getElementById("input");
-    console.log(input.textContent);
-    if (word.includes(input.value)) {
-        span.textContent = item;;
-    }else {
-      console.log('нуеееее');
-    }
+  if (word.includes(input.value)) {
+    showLetter(word);
+  } else {
+    changeImages(arrImage);
   }
-  
+}

@@ -1,8 +1,7 @@
-import { randomWords } from "./utils.js";
+import { randomWords, showImageStart, addKey, counterImg } from "./utils.js";
 import { createLetters } from "./createElements.js";
 import { chekValue } from "./chekValue.js";
-import { showImageStart } from "./utils.js";
-import { restartGame } from "./utils.js";
+
 const arrWords = [
   "truck",
   "pencil",
@@ -21,17 +20,29 @@ export const arrImage = [
   "./img/2.png",
   "./img/3.png",
   "./img/4.png",
+  "./img/pngtree-game-over.jpg",
 ];
+
 export const input = document.getElementById("input");
 export const word = randomWords(arrWords);
 export const wordContainer = document.getElementById("containerWordLine");
+export const arrNodes = wordContainer.childNodes;
 export const img = document.createElement("img");
+export const resultCounter = counterImg();
+export const button = document.getElementById("button");
+const buttonStart = document.getElementById("buttonStart");
+
 console.log(word);
 
-createLetters(word);
-showImageStart(arrImage);
 
-const buttonStart = document.getElementById("buttonStart");
-buttonStart.addEventListener("click", restartGame);
-const button = document.getElementById("button");
-button.addEventListener("click", chekValue);
+export function startGame() {
+  let resultCounter = counterImg();
+  wordContainer.textContent = "";
+  createLetters(word);
+  showImageStart(arrImage);
+
+  button.addEventListener("click", chekValue);
+  input.addEventListener("keydown", addKey);
+  buttonStart.addEventListener("click", startGame);
+}
+startGame();

@@ -15,7 +15,7 @@ img {
   margin: 0 auto;
   display: block;
   width: auto;
-  height: 739px;
+  height: 650px;
 }
 
 #button {
@@ -62,7 +62,7 @@ span {
 #containerButtonStart {
   text-align: center;
 }
-#buttonReStart {
+#buttonStart {
   margin-top: 15px;
   width: 200px;
   height: 30px;

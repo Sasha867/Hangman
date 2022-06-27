@@ -10,15 +10,4 @@ export const chekValue = function chekValue() {
   } else {
     changeImages(arrImage);
   }
-}
- 
-// const arrter = [];
-
-// export function winImage(arrNodes) {
-//   arrNodes.forEach((el) => {
-//     if (el.textContent === input.value){
-//       arrter.push(el);
-//     }
-//   });
- 
-// }
+};

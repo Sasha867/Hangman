@@ -1,8 +1,5 @@
 import { input } from "./index.js";
 import { wordContainer } from "./index.js";
-// import { arrNodes } from "./index.js";
-// import { winImage } from "./chekValue.js";
-
 
 export function showLetter(word) {
   const arrNodes = wordContainer.childNodes;

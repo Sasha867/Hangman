@@ -1,6 +1,6 @@
-import { resultCounter } from "./index";
-import { input } from "./index";
-import { img } from "./index";
+import { resultCounter } from "./index.js";
+import { input } from "./index.js";
+import { img } from "./index.js";
 
 export function changeImages(arrImage) {
   img.setAttribute("src", arrImage[resultCounter()]);

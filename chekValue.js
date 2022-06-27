@@ -2,25 +2,23 @@ import { arrImage, word } from "./index.js";
 import { showLetter } from "./functionsShowElemets.js";
 import { input } from "./index.js";
 import { changeImages } from "./changeImages.js";
+// import { arrNodes } from "./index.js";
 
-export function chekValue() {
+export const chekValue = function chekValue() {
   if (word.includes(input.value)) {
     showLetter(word);
   } else {
     changeImages(arrImage);
   }
 }
+ 
+// const arrter = [];
 
-// function counterImg() {
-//   let counter = 0;
-//   return function counterCreator() {
-//     return ++counter;
-//   };
-// }
-
-// const result = counterImg();
-// function changeImages(arrImage) {
-//   img.setAttribute("src", arrImage[resultCounter()]);
-//   imgWrapper.append(img);
-//   input.value = "";
+// export function winImage(arrNodes) {
+//   arrNodes.forEach((el) => {
+//     if (el.textContent === input.value){
+//       arrter.push(el);
+//     }
+//   });
+ 
 // }

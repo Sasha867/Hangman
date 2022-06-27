@@ -1,6 +1,8 @@
 import { chekValue } from "./chekValue.js";
+import { img, resultCounter } from "./index.js";
+import { button } from "./index.js";
+import { input } from "./index.js";
 
-import { img } from "./index.js";
 function mathRandom(max) {
   return Math.floor(Math.random() * max);
 }
@@ -15,12 +17,12 @@ export function showImageStart(arrImage) {
   imgWrapper.append(img);
 }
 
-export function addKey(event) {
+export const addKey = function addKey(event) {
   const keyCode = event.keyCode;
   if (keyCode === 13) {
     chekValue();
   }
-}
+};
 
 export function restartGame() {
   // if(result){
@@ -28,9 +30,9 @@ export function restartGame() {
   // }
 }
 
-
 export function counterImg() {
   let counter = 0;
+  console.log(counter);
   return function counterCreator() {
     return ++counter;
   };

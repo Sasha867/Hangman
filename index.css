@@ -16,6 +16,15 @@ img {
   display: block;
 }
 
+#button {
+  width: 50px;
+  height: 30px;
+  margin-left: 10px;
+  border: 2px solid black;
+  border-radius: 12%;
+  font-size: 20px;
+}
+
 .wrapInput {
   max-width: 100%;
   text-align: center;
@@ -38,19 +47,20 @@ span {
   height: 30px;
   width: 300px;
   text-indent: 25%;
-  
 }
 ::-webkit-input-placeholder {
   font-size: 18px;
   font-family: Tahoma;
- color: rgb(150, 139, 139);
+  color: rgb(150, 139, 139);
 }
 
-#containerButtonStart{
+#containerButtonStart {
   text-align: center;
 }
-#buttonStart{
+#buttonReStart {
   margin-top: 15px;
   width: 200px;
-  height: 25px;
+  height: 30px;
+  border: 2px solid black;
+  font-size: 20px;
 }

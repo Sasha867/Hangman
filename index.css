@@ -69,3 +69,28 @@ span {
   border: 2px solid black;
   font-size: 20px;
 }
+
+#popupwin {
+  position: absolute;
+  left: 15%;
+  top: 385px;
+  width: 70%;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 135px;
+  font-size: 45px;
+  background-color: rgb(216, 213, 213);
+  height: 300px;
+}
+#popuplose {
+  position: absolute;
+  left: 15%;
+  top: 385px;
+  width: 70%;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 280px;
+  font-size: 45px;
+  background-color: rgb(216, 213, 213);
+  height: 300px;
+}

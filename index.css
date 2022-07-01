@@ -17,6 +17,12 @@ img {
   width: auto;
   height: 650px;
 }
+@media (max-width: 900px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 #button {
   width: 50px;
@@ -88,7 +94,7 @@ span {
   position: fixed;
   align-items: center;
   justify-content: center;
-    display: flex;
+  display: flex;
   width: 100vw;
   height: 100vh;
   background-color: rgba(100, 96, 96, 0.55);

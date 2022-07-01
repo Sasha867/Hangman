@@ -1,15 +1,16 @@
-import { wordContainer } from "./startGame.js";
+import { img } from "./startGame.js";
+import { arrImage, arrWords } from "./index.js";
 
 function mathRandom(max) {
   return Math.floor(Math.random() * max);
 }
 
-export function randomWords(arrWords) {
+export function randomWords() {
   let arrLetters = arrWords[mathRandom(arrWords.length)].split("");
   return arrLetters;
 }
 
-export function showImageStart(arrImage, img) {
+export function showImageStart() {
   img.setAttribute("src", arrImage[0]);
   imgWrapper.append(img);
 }
@@ -22,10 +23,8 @@ export function counter() {
 }
 
 export function removePopup() {
-  if (wordContainer.popup) {
-    document.querySelector("#popuplose").remove();
-    document.querySelector("#popupwin").remove();
+  console.log(document.querySelector(".containerPopup"));
+  if (document.querySelector(".containerPopup")) {
+    document.querySelector(".containerPopup").remove();
   }
 }
-
-

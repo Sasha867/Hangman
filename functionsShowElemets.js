@@ -1,6 +1,7 @@
+import { input } from "./startGame.js";
+import { arrNodes } from "./startGame.js";
 
-export function showLetter(arrLetters, arrNodes, input) {
-  console.log(55, arrLetters);
+export function showLetter(arrLetters) {
   const indexLetters = arrLetters.reduce((acc, el, index) => {
     if (el === input.value.toLowerCase()) {
       acc.push(index);

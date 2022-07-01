@@ -1,4 +1,4 @@
-import { createLetters, createLosePopup } from "./createElements.js";
+import { createLetters, createPopup } from "./createElements.js";
 import { chekEnterValue } from "./chekValue.js";
 import { showImageStart, counter, randomWords, removePopup } from "./utils.js";
 import { arrImage, arrWords } from "./index.js";
@@ -8,14 +8,15 @@ export const wordContainer = document.getElementById("containerWordLine");
 export const arrNodes = wordContainer.childNodes;
 export const img = document.createElement("img");
 export const button = document.getElementById("button");
+export const buttonStartNewGame = document.getElementById("buttonStart");
 
 export function startNewGame() {
   input.value = "";
   wordContainer.textContent = "";
 
   const resultCounter = counter();
-  const buttonStartNewGame = document.getElementById("buttonStart");
-  const arrLetters = randomWords(arrWords);
+
+  const arrLetters = randomWords();
 
   createLetters(arrLetters);
   showImageStart(arrImage, img);
@@ -39,10 +40,9 @@ export function startNewGame() {
     }
     if (counterAttemps >= 4) {
       removeEvent();
-      createLosePopup();
+      createPopup("lose");
     }
   }
-
   function removeEvent() {
     button.removeEventListener("click", stepInTheGame);
     input.removeEventListener("keydown", stepInTheGame);

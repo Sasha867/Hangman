@@ -1,4 +1,5 @@
-import { wordContainer } from "./startGame.js";
+import { startNewGame, wordContainer } from "./startGame.js";
+import { removePopup } from "./utils.js";
 
 export function createLetters(arrLetters) {
   arrLetters.forEach((item) => {
@@ -7,19 +8,18 @@ export function createLetters(arrLetters) {
   });
 }
 
-export function createWinPopup() {
+export function createPopup(value) {
   const popup = document.createElement("div");
-  popup.innerHTML = `<div id="popupwin">Congratulations you win, 
-  enter "Start new game" !!!</div>`;
-  wordContainer.append(popup);
-  // document.body.appendChild(popup);
-  // const odm = document.getElementById("popupwin");
-  // const content = document.createElement("div");
-  // odm.appendChild(content);
-}
-
-export function createLosePopup() {
-  const popup = document.createElement("div");
-  popup.innerHTML = `<div id="popuplose"> You lose, enter "Start new game" !!!</div>`;
-  wordContainer.append(popup);
+  popup.classList.add("containerPopup");
+  imgWrapper.before(popup);
+  if (value === "win") {
+    popup.innerHTML = `<div id="popup">Congratulations you win, 
+    click "Start new game" !!! <button id="popupButton">Start new game</button></div>`;
+  } else if (value === "lose") {
+    popup.innerHTML = `<div id="popup">You lose, 
+    click "Start new game" !!! <button id="popupButton">Start new game</button></div>`;
+  }
+  const popupButton = document.getElementById("popupButton");
+  popupButton.addEventListener("click", startNewGame);
+  popupButton.addEventListener("click", removePopup);
 }

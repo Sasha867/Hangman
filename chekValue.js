@@ -1,23 +1,21 @@
 import { showLetter } from "./functionsShowElemets.js";
 import { changeImages } from "./changeImages.js";
 import { arrNodes, input } from "./startGame.js";
-import { createWinPopup } from "./createElements.js";
-import { arrImage } from "./index.js";
+import { createPopup } from "./createElements.js";
 
 export function chekEnterValue(resultCounter, arrLetters) {
-   if (arrLetters.includes(input.value.toLowerCase())) {
-    showLetter(arrLetters, arrNodes, input);
+  if (arrLetters.includes(input.value.toLowerCase())) {
+    showLetter(arrLetters);
     const isWin = checkWinGame(arrLetters);
     return isWin;
   } else {
     const wrongAttemps = resultCounter();
-    changeImages(arrImage, wrongAttemps, input);
+    changeImages(wrongAttemps);
     return wrongAttemps;
   }
 }
 
 function checkWinGame(arrLetters) {
-  console.log(44, arrLetters);
   let arr = [];
   const strLetters = arrLetters.toString();
   arrNodes.forEach((el) => {
@@ -26,10 +24,8 @@ function checkWinGame(arrLetters) {
     }
   });
   const newstrLetters = arr.toString();
-  console.log(strLetters);
-  console.log(newstrLetters);
   if (strLetters === newstrLetters) {
-    createWinPopup();
+    createPopup("win");
     return true;
   }
   return false;

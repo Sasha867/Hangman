@@ -12,8 +12,12 @@ export function createWinPopup() {
   popup.innerHTML = `<div id="popupwin">Congratulations you win, 
   enter "Start new game" !!!</div>`;
   wordContainer.append(popup);
-  console.log(wordContainer.childNodes);
+  // document.body.appendChild(popup);
+  // const odm = document.getElementById("popupwin");
+  // const content = document.createElement("div");
+  // odm.appendChild(content);
 }
+
 export function createLosePopup() {
   const popup = document.createElement("div");
   popup.innerHTML = `<div id="popuplose"> You lose, enter "Start new game" !!!</div>`;

@@ -8,15 +8,15 @@ export const wordContainer = document.getElementById("containerWordLine");
 export const arrNodes = wordContainer.childNodes;
 export const img = document.createElement("img");
 export const button = document.getElementById("button");
-// export const arrLetters = randomWords(arrWords);
 
 export function startNewGame() {
   input.value = "";
   wordContainer.textContent = "";
+
   const resultCounter = counter();
   const buttonStartNewGame = document.getElementById("buttonStart");
-
   const arrLetters = randomWords(arrWords);
+
   createLetters(arrLetters);
   showImageStart(arrImage, img);
   console.log(arrLetters);
@@ -25,19 +25,26 @@ export function startNewGame() {
   input.addEventListener("keydown", stepInTheGame);
   buttonStartNewGame.addEventListener("click", startNewGame);
   buttonStartNewGame.addEventListener("click", removePopup);
+  buttonStartNewGame.addEventListener("click", removeEvent);
 
   function stepInTheGame(event) {
-    let counterAttemps = 0;
+    let counterAttemps;
     const keyMouseName = event.pointerType;
     const keyName = event.code;
     if (keyName === "Enter" || keyMouseName === "mouse") {
       counterAttemps = chekEnterValue(resultCounter, arrLetters);
     }
-    console.log(counterAttemps);
+    if (counterAttemps === true) {
+      removeEvent();
+    }
     if (counterAttemps >= 4) {
-      button.removeEventListener("click", stepInTheGame);
-      input.removeEventListener("keydown", stepInTheGame);
+      removeEvent();
       createLosePopup();
     }
+  }
+
+  function removeEvent() {
+    button.removeEventListener("click", stepInTheGame);
+    input.removeEventListener("keydown", stepInTheGame);
   }
 }

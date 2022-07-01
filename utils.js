@@ -1,4 +1,3 @@
-
 import { wordContainer } from "./startGame.js";
 
 function mathRandom(max) {
@@ -6,8 +5,8 @@ function mathRandom(max) {
 }
 
 export function randomWords(arrWords) {
-  let word = arrWords[mathRandom(arrWords.length)].split("");
-  return word;
+  let arrLetters = arrWords[mathRandom(arrWords.length)].split("");
+  return arrLetters;
 }
 
 export function showImageStart(arrImage, img) {
@@ -28,3 +27,5 @@ export function removePopup() {
     document.querySelector("#popupwin").remove();
   }
 }
+
+

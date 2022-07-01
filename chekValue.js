@@ -5,9 +5,10 @@ import { createWinPopup } from "./createElements.js";
 import { arrImage } from "./index.js";
 
 export function chekEnterValue(resultCounter, arrLetters) {
-  if (arrLetters.includes(input.value)) {
+   if (arrLetters.includes(input.value.toLowerCase())) {
     showLetter(arrLetters, arrNodes, input);
-    checkWinGame(arrLetters);
+    const isWin = checkWinGame(arrLetters);
+    return isWin;
   } else {
     const wrongAttemps = resultCounter();
     changeImages(arrImage, wrongAttemps, input);
@@ -16,6 +17,7 @@ export function chekEnterValue(resultCounter, arrLetters) {
 }
 
 function checkWinGame(arrLetters) {
+  console.log(44, arrLetters);
   let arr = [];
   const strLetters = arrLetters.toString();
   arrNodes.forEach((el) => {
@@ -27,9 +29,8 @@ function checkWinGame(arrLetters) {
   console.log(strLetters);
   console.log(newstrLetters);
   if (strLetters === newstrLetters) {
-    arr = [];
-    // button.removeEventListener("click", stepInTheGame);
-    // input.removeEventListener("keydown", stepInTheGame);
     createWinPopup();
+    return true;
   }
+  return false;
 }
